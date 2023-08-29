@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose a template</title>
+</head>
+<body>
+<h1>Choose a template:</h1>
+<div id="CenterChoose">
+{% for template in templates%}
+
+    <ul>
+      <li>
+          <a href="{{url_for('templatePage',TemplateName=template)}}">
+          <img src="C:\Users\ThinkPad\PycharmProjects\Flask-Template-Manipulation\static\image\{{template}}.png"></a>
+      <a id="TempText">{{template}}</a>
+      </li>
+  </ul>
+{%endfor%}
+</div>
+ <img src="C:\Users\ThinkPad\PycharmProjects\Flask-Template-Manipulation\static\image\word2.jpeg">
+
+
+</body>
+</html>
