@@ -2,9 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{Template}}</title>
+    <link rel="stylesheet" href="static/css/Contract.css?1422585377" type="text/css"/>
 </head>
 <body>
-<img src="static/image/word2.jpeg">
+{% if Template == "Receipt_Temp" %}
+<form>
+ <div class="center">
+    <label for="date">First name:</label><br>
+  <input type="text" id="date" name="date"><br>
+  <label for="receiptId">Last name:</label><br>
+  <input type="text" id="receiptId" name="ReceiptId">
+ </div>
+<div class="left">
+    <div style="text-align:left">
+        <h2>Seller Information</h2>
+    </div>
+        <label for="Seller">Full name:</label><br>
+  <input type="text" id="Seller" name="Seller"><br>
+
+  <label for="SAddress">Address:</label><br>
+  <input type="text" id="SAddress" name="SAddress"><br>
+
+  <label for="SAddress2">Second Address (if none leave blank):</label><br>
+  <input type="text" id="SAddress2" name="SAddress2"><br>
+
+  <label for="SCity">City:</label><br>
+  <input type="text" id="SCity" name="SCity"><br>
+
+     <label for="SState">State:</label><br>
+  <input type="text" id="SState" name="SState"><br>
+
+  <label for="SPhone">Phone Number:</label><br>
+  <input type="text" id="SPhone" name="SPhone"><br>
+</div>
+<div class="right">
+     <h2>Buyer Information</h2>
+     <label for="Buyer">Full name:</label><br>
+  <input type="text" id="Buyer" name="Buyer"><br>
+  <label for="BAddress">Address:</label><br>
+  <input type="text" id="BAddress" name="BAddress"><br>
+  <label for="BAddress2">Second Address:</label><br>
+  <input type="text" id="BAddress2" name="BAddress2"><br>
+  <label for="BCity">City:</label><br>
+  <input type="text" id="BCity" name="BCity"><br>
+     <label for="BState">State:</label><br>
+  <input type="text" id="BState" name="BState"><br>
+  <label for="BPhone">Phone Number:</label><br>
+  <input type="text" id="BPhone" name="BPhone"><br>
+</div>
+<div class="bottom">
+    <label for="Item">Enter Item name,<br>
+        quantity and price per unit <br>
+        with a single space between:</label><br>
+  <input type="text" id="Item" name="Item"><br>
+<input  type="submit" value="Save To PDF">
+</div>
+
+</form>
+
+{% else Template= Contract_Temp %}
+
+
 </body>
 </html>

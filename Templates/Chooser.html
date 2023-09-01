@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Choose a template</title>
-<link rel="stylesheet" href="static/css/Styling.css?1422585377" type="text/css"/></head>
+<link rel="stylesheet" href="static/css/Styling.css?1422585377" type="text/css"/>
+
+</head>
 <body>
 <h1 class="center">Choose a template:</h1>
 <div id="CenterChoose" class="center">
@@ -12,12 +14,18 @@
     <ul>
       <li>
           <a class="thumbnail" href="{{url_for('templatePage',TemplateName=template)}}">
-          <img src="static/image/{{template}}.jpeg" height="130" width="130">
+         <img src="static/image/{{template}}.jpeg" height="130" width="130">
+         <span>
+             <img src="static/image/{{ template }}.jpeg" alt="{{ template }}" height="260" width="260">
+         </span>
           </a>
+
       </li>
+        <br>
         <li>
-            <a id="TempText">{{template}}</a>
+            <a class="textStyle" >{{template}}</a>
         </li>
+
   </ul>
 {%endfor%}
 </div>

@@ -1,0 +1,53 @@
+.textStyle{
+font-style: italic;
+font-family: Helvetica;
+font-size: 16px;
+ color: light blue;
+}
+.center {
+position: fixed;
+top: 2%;
+left: 40%;
+padding: 70 px;
+}
+
+.left{
+position: fixed;
+top: 13%;
+left: 30%;
+padding: 20 px;
+}
+.right {
+  position: fixed;
+top: 13%;
+right: 30%;
+padding: 20 px;
+}
+.bottom{
+position: fixed;
+top: 62%;
+left: 40%;
+padding: 20 px;
+}
+body {
+background-color: rgb(33 33 33) ;
+}
+label{
+margin-bottom: 9px;
+margin-top: 9px;
+color: white
+}
+h2 {
+color:white
+}
+input{
+color: light gray
+margin-bottom: 9px;
+margin-top: 9px;
+}
+#Save{
+background-color: red
+
+margin-bottom: 4px;
+margin-top: 4px;
+}

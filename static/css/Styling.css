@@ -37,7 +37,14 @@
 }
  h1 {
   font-family: "Segoe UI", Arial, sans-serif
+   color: light blue;
 }
 ul {
 list-style-type: none;
+}
+.textStyle{
+font-style: italic;
+font-family: Helvetica;
+font-size: 16px;
+ color: light blue;
 }
