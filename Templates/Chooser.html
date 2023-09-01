@@ -3,22 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Choose a template</title>
-</head>
+<link rel="stylesheet" href="static/css/Styling.css?1422585377" type="text/css"/></head>
 <body>
-<h1>Choose a template:</h1>
-<div id="CenterChoose">
+<h1 class="center">Choose a template:</h1>
+<div id="CenterChoose" class="center">
 {% for template in templates%}
 
     <ul>
       <li>
-          <a href="{{url_for('templatePage',TemplateName=template)}}">
-          <img src="C:\Users\ThinkPad\PycharmProjects\Flask-Template-Manipulation\static\image\{{template}}.png"></a>
-      <a id="TempText">{{template}}</a>
+          <a class="thumbnail" href="{{url_for('templatePage',TemplateName=template)}}">
+          <img src="static/image/{{template}}.jpeg" height="130" width="130">
+          </a>
       </li>
+        <li>
+            <a id="TempText">{{template}}</a>
+        </li>
   </ul>
 {%endfor%}
 </div>
- <img src="C:\Users\ThinkPad\PycharmProjects\Flask-Template-Manipulation\static\image\word2.jpeg">
+
 
 
 </body>
