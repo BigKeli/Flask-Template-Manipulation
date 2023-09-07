@@ -10,6 +10,12 @@ top: 2%;
 left: 40%;
 padding: 70 px;
 }
+.center-middle{
+position: fixed;
+top: 38%;
+left: 40%;
+padding: 70 px;
+}
 
 .left{
 position: fixed;
@@ -34,7 +40,7 @@ background-color: rgb(33 33 33) ;
 }
 label{
 margin-bottom: 9px;
-margin-top: 9px;
+margin-top: 14px;
 color: white
 }
 h2 {
@@ -51,3 +57,4 @@ background-color: red
 margin-bottom: 4px;
 margin-top: 4px;
 }
+

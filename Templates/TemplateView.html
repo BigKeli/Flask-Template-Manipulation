@@ -24,7 +24,7 @@
   <label for="SAddress">Address:</label><br>
   <input type="text" id="SAddress" name="SAddress"><br>
 
-  <label for="SAddress2">Second Address (if none leave blank):</label><br>
+  <label for="SAddress2">Second Address</label><br>
   <input type="text" id="SAddress2" name="SAddress2"><br>
 
   <label for="SCity">City:</label><br>
@@ -60,9 +60,39 @@
 </div>
 
 </form>
+{% elif Template == "Contract_Temp" %}
+<form>
+ <div class="left">
+    <div style="text-align:left">
+        <h2>First Party Information</h2>
+    </div>
+     <label for="FirstParty">First Party Name:</label><br>
+  <input type="text" id="FirstParty"><br>
+    <label for="FirstPartyNotes">First Party Notes::</label><br>
+  <input type="text" id="FirstPartyNotes" name="FPN"><br>
+ </div>
+    <div class="right">
+     <h2>Second Party Information</h2>
+   <label for="SecondParty">Second Party Name</label><br>
+        <input type="text" id="SecondParty" name="SecondParty"><br>
+  <label for="SecondPartyNotes">Second Party Notes:</label><br>
+  <input type="text" id="SecondPartyNotes" name="SPN"><br>
+    </div>
+    <div class="center-middle ">
+      <label for="startDate">Start Date</label><br>
+  <input type="text" id="startDate" name="SD"><br>
 
-{% else Template= Contract_Temp %}
+  <label for="endDate">End Date:</label><br>
+  <input type="text" id="endDate" name="ED"><br>
 
+     <label for="State">State:</label><br>
+  <input type="text" id="State" name="State"><br>
 
+  <label for="ContractNotes">Contract Notes:</label><br>
+  <input type="text" id="ContractNotes" name="Cnotes"><br>
+<input  type="submit" value="Save To PDF">
+    </div>
+</form>
+{% endif %}
 </body>
 </html>

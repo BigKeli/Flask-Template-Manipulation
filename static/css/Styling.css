@@ -46,5 +46,28 @@ list-style-type: none;
 font-style: italic;
 font-family: Helvetica;
 font-size: 16px;
- color: light blue;
+ color: white;
+}
+body {
+background-color: rgb(33 33 33) ;
+}
+h1{
+color:white
+}
+.center {
+position: fixed;
+top: 2%;
+left: 40%;
+padding: 70 px;
+}
+.center-middle{
+position: fixed;
+top: 15%;
+left: 30%;
+padding: 70 px;
+}
+li {
+margin-bottom: 9px;
+margin-top: 14px;
+display:inline;
 }
