@@ -7,12 +7,14 @@
 </head>
 <body>
 {% if Template == "Receipt_Temp" %}
-<form>
+<form method="post">
  <div class="center">
-    <label for="date">First name:</label><br>
+    <label for="date">Date:</label><br>
   <input type="text" id="date" name="date"><br>
-  <label for="receiptId">Last name:</label><br>
-  <input type="text" id="receiptId" name="ReceiptId">
+  <label for="receiptId">ReceiptID</label><br>
+  <input type="text" id="receiptId" name="ReceiptId"><br>
+     <label for="Total">Total</label><br>
+  <input type="text" id="Total" name="ReceiptId">
  </div>
 <div class="left">
     <div style="text-align:left">
@@ -56,7 +58,7 @@
         quantity and price per unit <br>
         with a single space between:</label><br>
   <input type="text" id="Item" name="Item"><br>
-<input  type="submit" value="Save To PDF">
+<input  type="submit" name="Receipt" value="Save To PDF">
 </div>
 
 </form>
