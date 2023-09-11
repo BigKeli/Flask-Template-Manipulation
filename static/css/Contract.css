@@ -58,3 +58,18 @@ margin-bottom: 4px;
 margin-top: 4px;
 }
 
+.leftWeek{
+position: fixed;
+top: 21%;
+left: 26%;
+padding: 20 px;
+}
+.leftReceipt{
+position: fixed;
+top: 13%;
+left: 24%;
+padding: 20 px;
+
+
+}
+

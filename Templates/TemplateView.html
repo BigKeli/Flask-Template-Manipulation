@@ -16,7 +16,7 @@
      <label for="Total">Total</label><br>
   <input type="text" id="Total" name="ReceiptId">
  </div>
-<div class="left">
+<div class="leftReceipt">
     <div style="text-align:left">
         <h2>Seller Information</h2>
     </div>
@@ -63,7 +63,7 @@
 
 </form>
 {% elif Template == "Contract_Temp" %}
-<form>
+<form method="post">
  <div class="left">
     <div style="text-align:left">
         <h2>First Party Information</h2>
@@ -95,6 +95,43 @@
 <input  type="submit" value="Save To PDF">
     </div>
 </form>
+{% elif Template == "Weekly_Temp" %}
+<form method="post">
+     <div class="center ">
+    <label for="FullName">Full Name:</label><br>
+  <input type="text" id="FullName" name="FullName"><br>
+
+  <label for="WStartDate">Start Date:</label><br>
+  <input type="text" id="WStartDate" name="StartDate"><br>
+
+     <label for="WEndDate">End Date:</label><br>
+  <input type="text" id="WEndDate" name="EndDate"><br>
+</div>
+  <div class="leftWeek">
+  <label for="Monday"> Monday</label><br>
+  <input type="text" id="Monday" name="Monday"><br>
+     <label for="Tuesday">Tuesday:</label><br>
+  <input type="text" id="Tuesday" name="Tuesday"><br>
+
+  <label for="Wednesday"> Wednesday</label><br>
+  <input type="text" id="Wednesday" name="WWednesday"><br>
+     <label for="Thursday">Thursday:</label><br>
+  <input type="text" id="Thursday" name="Thursday"><br>
+
+  <label for="Friday"> Friday:</label><br>
+  <input type="text" id="Friday" name="Friday"><br>
+  </div>
+  <div class="bottom">
+
+    <label for="PlansNextWeek">Plans Next Week:</label><br>
+  <input type="text" id="PlansNextWeek" name="PlansNextWeek"><br>
+
+  <label for="ReqProp">Request and Propositions:</label><br>
+  <input type="text" id="ReqProp" name="ReqProp"><br>
+<input  type="submit" value="Save To PDF">
+  </div>
+</form>
+
 {% endif %}
 </body>
 </html>

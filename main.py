@@ -3,7 +3,7 @@ import os
 from mailmerge import MailMerge
 from docx2pdf import convert
 
-from controllers import merge_Receipt
+from controllers import merge_Receipt, merge_Contract
 
 app = Flask(__name__)
 
@@ -39,8 +39,18 @@ def templatePage(TemplateName):
         buyer_phone = request.form.get("BPhone")
         itemString = request.form.get("Item")
         total_total = request.form.get("Total")
-        print("Lali3")
         merge_Receipt(date,address_2,seller, total_total,buyer_state,city,address,phone,buyer_city,state,buyer_name,buyer_address2,buyer_address,receipt_no,buyer_phone,itemString)
+    elif TemplateName=="Contract_Temp":
+       if request.method == "POST":
+         end_date=request.form.get("endDate")
+         contract_notes=request.form.get("ContractNotes")
+         second_party_notes=request.form.get("SecondPartyNotes")
+         first_party_notes=request.form.get("FirstPartyNotes")
+         first_party=request.form.get("FirstParty")
+         start_date=request.form.get("startDate")
+         state=request.form.get("State")
+         second_party=request.form.get("SecondParty")
+         merge_Contract(end_date, contract_notes, second_party_notes, first_party_notes, first_party, start_date, state, second_party)
     return render_template("TemplateView.html",Template=TemplateName)
 
 
