@@ -13,7 +13,8 @@ def merge_Contract(end_date, contract_notes, second_party_notes,
     doc = document.merge(end_date=end_date, contract_notes=contract_notes, second_party_notes=second_party_notes,
                    first_party_notes=first_party_notes, first_party=first_party, start_date=start_date,
                    state=state, second_party=second_party, today_date="data sot rooopt")
-    convert(doc, "static/PDF/Contract.pdf")
+    document.write("static/Contract.docx")
+    convert("static/Contract.docx")
 #'date', 'address_2', 'seller', 'total_total',
 #'buyer_state', 'city', 'total', 'address', 'phone',
 #'quantity', 'buyer_city', 'state', 'buyer_name', 'buyer_address2',
@@ -35,14 +36,16 @@ def merge_Receipt(date, address_2, seller, total_total,
         sales_history.append(dict(item=itemList[i], quantity=itemList[i + 1], unitPrice=itemList[i + 2],
                                   total=str(int(itemList[i + 2]) * int(itemList[i + 1]))))
     doc = document.merge_rows('item', sales_history)
-    convert(doc, "static/PDF/Receipt.pdf")
+    document.write("static/Receipt.docx")
+    convert("static/Receipt.docx")
 def merge_Week(end_date, name_surname, wednesday, plans_for_next_week, monday,
                tuesday, thursday, issue_notes, start_date, friday, req_prop):
     document = MailMerge("static/WorkTemplates/Weekly_Temp.docx")
-    doc = document.merge(end_date=end_date, name_surname=name_surname, wednesday=wednesday, plans_for_next_week=plans_for_next_week,
+    document.merge(end_date=end_date, name_surname=name_surname, wednesday=wednesday, plans_for_next_week=plans_for_next_week,
 monday=monday, tuesday=tuesday, thursday=thursday, issue_notes=issue_notes , start_date=start_date,
 friday=friday, req_prop=req_prop)
-    convert(doc, "static/PDF/Weekly_Report.pdf")
+    document.write("static/Week.docx")
+    convert("static/Week.docx")
 #'end_date', 'name_surname', 'wednesday', 'plans_for_next_week',
 # 'monday', 'tuesday', 'thursday', 'issue_notes', 'start_date',
 # 'friday', 'req_prop'
