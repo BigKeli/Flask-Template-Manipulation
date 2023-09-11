@@ -12,9 +12,9 @@
     <label for="date">Date:</label><br>
   <input type="text" id="date" name="date"><br>
   <label for="receiptId">ReceiptID</label><br>
-  <input type="text" id="receiptId" name="ReceiptId"><br>
+  <input type="text" id="receiptId" name="receiptId"><br>
      <label for="Total">Total</label><br>
-  <input type="text" id="Total" name="ReceiptId">
+  <input type="text" id="Total" name="Total">
  </div>
 <div class="leftReceipt">
     <div style="text-align:left">
@@ -62,7 +62,6 @@
 </div>
 
 </form>
-<<<<<<< HEAD
 {% elif Template == "Contract_Temp" %}
 <form method="post">
  <div class="left">
@@ -70,29 +69,29 @@
         <h2>First Party Information</h2>
     </div>
      <label for="FirstParty">First Party Name:</label><br>
-  <input type="text" id="FirstParty"><br>
+  <input type="text" id="FirstParty" name="FirstParty"><br>
     <label for="FirstPartyNotes">First Party Notes::</label><br>
-  <input type="text" id="FirstPartyNotes" name="FPN"><br>
+  <input type="text" id="FirstPartyNotes" name="FirstPartyNotes"><br>
  </div>
     <div class="right">
      <h2>Second Party Information</h2>
    <label for="SecondParty">Second Party Name</label><br>
         <input type="text" id="SecondParty" name="SecondParty"><br>
   <label for="SecondPartyNotes">Second Party Notes:</label><br>
-  <input type="text" id="SecondPartyNotes" name="SPN"><br>
+  <input type="text" id="SecondPartyNotes" name="SecondPartyNotes"><br>
     </div>
     <div class="center-middle ">
       <label for="startDate">Start Date</label><br>
-  <input type="text" id="startDate" name="SD"><br>
+      <input type="text" id="startDate" name="startDate"><br>
 
-  <label for="endDate">End Date:</label><br>
-  <input type="text" id="endDate" name="ED"><br>
+      <label for="endDate">End Date:</label><br>
+      <input type="text" id="endDate" name="endDate"><br>
 
      <label for="State">State:</label><br>
-  <input type="text" id="State" name="State"><br>
+     <input type="text" id="State" name="State"><br>
 
   <label for="ContractNotes">Contract Notes:</label><br>
-  <input type="text" id="ContractNotes" name="Cnotes"><br>
+  <input type="text" id="ContractNotes" name="ContractNotes"><br>
 <input  type="submit" value="Save To PDF">
     </div>
 </form>
@@ -133,8 +132,6 @@
   </div>
 </form>
 
-=======
->>>>>>> 9a3e7707b303d368aeb09b0cbafdf0a1f4468532
 {% endif %}
 </body>
 </html>

@@ -9,9 +9,10 @@ def merge_Contract(end_date, contract_notes, second_party_notes,
                    first_party_notes, first_party, start_date, state,
                    second_party):
     document = MailMerge("static/WorkTemplates/Contract_Temp.docx")
+
     doc = document.merge(end_date=end_date, contract_notes=contract_notes, second_party_notes=second_party_notes,
                    first_party_notes=first_party_notes, first_party=first_party, start_date=start_date,
-                   state=state, second_party=second_party, today_date=date.today())
+                   state=state, second_party=second_party, today_date="data sot rooopt")
     convert(doc, "static/PDF/Contract.pdf")
 #'date', 'address_2', 'seller', 'total_total',
 #'buyer_state', 'city', 'total', 'address', 'phone',
