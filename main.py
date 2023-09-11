@@ -1,9 +1,15 @@
+import datetime
+
 from flask import Flask, render_template, url_for, request
 import os
-from mailmerge import MailMerge
+import controllers as con
 from docx2pdf import convert
+<<<<<<< HEAD
 
 from controllers import merge_Receipt, merge_Contract
+=======
+from datetime import date
+>>>>>>> 9a3e7707b303d368aeb09b0cbafdf0a1f4468532
 
 app = Flask(__name__)
 
@@ -19,8 +25,9 @@ def homepage():
         doc.append(name)
     return render_template("Chooser.html",templates=doc)
 
-@app.route("/<string:TemplateName>",methods=["POST","GET"])
+@app.route("/<string:TemplateName>", methods=['GET', 'POST'])
 def templatePage(TemplateName):
+<<<<<<< HEAD
     if TemplateName == "Receipt_Temp":
       if request.method == "POST":
         date = request.form.get("date")
@@ -55,3 +62,16 @@ def templatePage(TemplateName):
 
 
 
+=======
+    if request.method=='POST':
+        if request.form['type']==1:
+            con.merge_Receipt(datetime.date, request.form['SAddress2'],request.form['Seller'],
+            request.form['BState'], request.form['SCity'], request.form['SAddress'], request.form['SPhone'],
+            request.form['BCity'], request.form['SState'], request.form['BName'], request.form['BAddress2'],
+            0,request.form['BPhone'], request.form['Item'], '' )
+    return render_template("TemplateView.html", Template=TemplateName)
+# def returnPDF(ToBeConverted):
+#     convert("static/WorkTemplates/Contract_Temp.docx", "static/PDF/output.pdf")
+#
+#     return render_template()
+>>>>>>> 9a3e7707b303d368aeb09b0cbafdf0a1f4468532
