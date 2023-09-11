@@ -1,5 +1,7 @@
 from mailmerge import MailMerge
 from datetime import date
+from docx2pdf import convert
+
 #'end_date', 'contract_notes',
 #'second_party_notes', 'first_party_notes',
 #'first_party', 'start_date', 'state', 'second_party', 'today_date'
@@ -33,6 +35,7 @@ def merge_Receipt(date, address_2, seller, total_total,
                                   total=str(int(itemList[i + 2]) * int(itemList[i + 1]))))
     document.merge_rows('item', sales_history)
 
+    returnPDF()
 
 def merge_Week(end_date, name_surname, wednesday, plans_for_next_week, monday,
                tuesday, thursday, issue_notes, start_date, friday, req_prop):
@@ -44,3 +47,6 @@ friday=friday, req_prop=req_prop)
 #'end_date', 'name_surname', 'wednesday', 'plans_for_next_week',
 # 'monday', 'tuesday', 'thursday', 'issue_notes', 'start_date',
 # 'friday', 'req_prop'
+def returnPDF(ToBeConverted):
+
+    convert(ToBeConverted, "static/PDF/output.pdf")
