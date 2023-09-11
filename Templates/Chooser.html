@@ -8,26 +8,24 @@
 </head>
 <body>
 <h1 class="center">Choose a template:</h1>
-<div id="CenterChoose" class="center">
+<div class="center-middle">
+    <ul>
 {% for template in templates%}
 
-    <ul>
       <li>
+        <div>
           <a class="thumbnail" href="{{url_for('templatePage',TemplateName=template)}}">
          <img src="static/image/{{template}}.jpeg" height="130" width="130">
          <span>
              <img src="static/image/{{ template }}.jpeg" alt="{{ template }}" height="260" width="260">
-         </span>
+         </span> <br>
           </a>
-
-      </li>
-        <br>
-        <li>
             <a class="textStyle" >{{template}}</a>
-        </li>
+        </div>
+      </li>
 
-  </ul>
 {%endfor%}
+        </ul>
 </div>
 
 
