@@ -7,18 +7,16 @@
 
 </head>
 <body>
-<h1 class="center">Choose a template:</h1>
+<h1 class="title">Choose a template:</h1>
 <div class="center-middle">
     <ul>
 {% for template in templates%}
 
       <li>
-        <div>
-          <a class="thumbnail" href="{{url_for('templatePage',TemplateName=template)}}">
-         <img src="static/image/{{template}}.jpeg" height="130" width="130">
-         <span>
-             <img src="static/image/{{ template }}.jpeg" alt="{{ template }}" height="260" width="260">
-         </span> <br>
+        <div class="thumbnail">
+          <a href="{{url_for('templatePage',TemplateName=template)}}">
+         <img class="thumbnailImg" src="static/image/{{template}}.jpeg" height="534" width="378">
+         <br>
           </a>
             <a class="textStyle" >{{template}}</a>
         </div>

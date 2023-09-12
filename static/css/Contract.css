@@ -1,75 +1,56 @@
-.textStyle{
-font-style: italic;
-font-family: Helvetica;
-font-size: 16px;
- color: light blue;
-}
-.center {
-position: fixed;
-top: 2%;
-left: 40%;
-padding: 70 px;
-}
-.center-middle{
-position: fixed;
-top: 38%;
-left: 40%;
-padding: 70 px;
-}
-
-.left{
-position: fixed;
-top: 13%;
-left: 30%;
-padding: 20 px;
-}
-.right {
-  position: fixed;
-top: 13%;
-right: 30%;
-padding: 20 px;
-}
-.bottom{
-position: fixed;
-top: 62%;
-left: 40%;
-padding: 20 px;
-}
 body {
-background-color: rgb(33 33 33) ;
+    background-color: rgb(33 33 33) ;
+    text-shadow: 2px 2px #000000;
+    font-size: 15px;
+    color: white;
+    font-family:"Verdana", Sans-serif;
 }
-label{
-margin-bottom: 9px;
-margin-top: 14px;
-color: white
+.top_center {
+margin-top: 20px;
+text-align: center;
 }
-h2 {
-color:white
+.top_label{
+    margin-left: 15px;
 }
-input{
-color: light gray
-margin-bottom: 9px;
-margin-top: 9px;
+.top_field{
+    width: 10%
 }
-#Save{
-background-color: red
-
-margin-bottom: 4px;
-margin-top: 4px;
+input[type=text] {
+  width: 50%;
+  margin-bottom: 20px;
+  margin-right:20px;
+  border-radius:5px;
+  font-size: 15px;
+  box-shadow: 0px 0px #000000;
+  transition: box-shadow .2s;
 }
-
-.leftWeek{
-position: fixed;
-top: 21%;
-left: 26%;
-padding: 20 px;
-}
-.leftReceipt{
-position: fixed;
-top: 13%;
-left: 24%;
-padding: 20 px;
-
-
+input[type=text]:hover{
+    box-shadow: 3px 3px #000000;
 }
 
+.seller{
+    border-style: solid;
+    border-radius: 10px;
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    width: 30%;
+    transition: box-shadow .2s, border-color .2s;
+}
+.seller:hover{
+    box-shadow: 0px 0px 1px 5px #1DB954;
+    border-color: black;
+}
+.buyer{
+    border-style: solid;
+    border-radius: 10px;
+    position: fixed;
+    top: 20%;
+    right: 10%;
+    width: 30%;
+    transition: box-shadow .2s, border-color .2s;
+}
+.buyer:hover{
+    box-shadow: 0px 0px 1px 5px #1DB954;
+    border-color: black;
+}
